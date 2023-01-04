@@ -47,6 +47,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
                 .centerCrop()
                 .into(holder.iv_foto);
 
+
     }
 
     @Override
