@@ -1,6 +1,7 @@
 package com.si5a.ilmupedia;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,8 +48,27 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
                 .centerCrop()
                 .into(holder.iv_foto);
 
+        //click detail actitivity
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String xnama, xtentang, xfoto;
+                xnama = perpustakaan.getNama();
+                xtentang = perpustakaan.getTentang();
+                xfoto = perpustakaan.getFoto();
+
+                Intent kirim = new Intent(ctx, DetailActivity.class);
+                kirim.putExtra("xnama",xnama);
+                kirim.putExtra("xtentang", xtentang);
+                kirim.putExtra("xfoto", xfoto);
+                ctx.startActivity(kirim);
+
+            }
+        });
     }
+
+
 
     @Override
     public int getItemCount() {
