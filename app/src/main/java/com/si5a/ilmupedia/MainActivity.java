@@ -2,6 +2,7 @@ package com.si5a.ilmupedia;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         AdapterCard AC = new AdapterCard(data, MainActivity.this);
         rvPerpustakaan.setAdapter(AC);
     }
-
 
 
 }

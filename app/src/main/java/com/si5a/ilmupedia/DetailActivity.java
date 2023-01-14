@@ -12,30 +12,30 @@ import android.content.Intent;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private ImageView ivFoto;
-    private TextView tvnama, tvTentang;
-    private String yNama, ytentang, yFoto;
+    private ImageView ivfoto;
+    private TextView tvnama, tvtentang;
+    private String ynama, ytentang, yfoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ivFoto = findViewById(R.id.iv_foto);
+        ivfoto = findViewById(R.id.iv_foto);
         tvnama = findViewById(R.id.tv_nama);
-        tvTentang = findViewById(R.id.tv_tentang);
+        tvtentang = findViewById(R.id.tv_tentang);
 
         Intent terima = getIntent();
-        yNama = terima.getStringExtra("xNama");
-        ytentang = terima.getStringExtra("xTentang");
-        yFoto = terima.getStringExtra("xFoto");
+        ynama = terima.getStringExtra("xnama");
+        ytentang = terima.getStringExtra("xtentang");
+        yfoto = terima.getStringExtra("xfoto");
 
-        tvnama.setText(yNama);
-        tvTentang.setText(ytentang);
+        tvnama.setText(ynama);
+        tvtentang.setText(ytentang);
         Glide
                 .with(DetailActivity.this)
-                .load(yFoto)
-                .into(ivFoto);
+                .load(yfoto)
+                .into(ivfoto);
 
     }
 
