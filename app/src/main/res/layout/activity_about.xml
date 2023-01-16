@@ -9,9 +9,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Robet Bangun Legato 2024240083, Valentino Lie 2024240062, Keven Mandari Onggo 2024240015"
+        android:text="Anggota Kelompok:\nRobet Bangun Legato 2024240083\nValentino Lie 2024240062\nKeven Mandari Onggo 2024240015"
         android:textSize="17sp"
         android:textStyle="normal"
+        android:padding="6dp"
         />
 
 

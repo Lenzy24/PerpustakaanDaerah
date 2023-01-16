@@ -24,6 +24,30 @@
             android:padding="6dp"
             style="@style/TextAppearance.AppCompat.Large"
             />
+
+        <TextView
+            android:id="@+id/tv_text_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat : "
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:textColor="#00942A"
+            />
+
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ini adalah alamat"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:padding="6dp"
+            android:textColor="#00942A"
+            />
        <TextView
            android:id="@+id/tv_tentang"
            android:layout_width="wrap_content"
@@ -33,6 +57,9 @@
            android:justificationMode="inter_word"
            style="@style/TextAppearance.AppCompat.Medium"
            />
+
+
+
 
         <Button
             android:id="@+id/bt_lokasi"

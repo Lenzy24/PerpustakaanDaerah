@@ -16,8 +16,8 @@ import android.content.Intent;
 public class DetailActivity extends AppCompatActivity {
     private Button btLokasi;
     private ImageView ivfoto;
-    private TextView tvnama, tvtentang;
-    private String ynama, ytentang, yfoto, ylokasi;
+    private TextView tvnama, tvtentang, tvalamat;
+    private String ynama, ytentang, yfoto, ylokasi, yalamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class DetailActivity extends AppCompatActivity {
         tvnama = findViewById(R.id.tv_nama);
         tvtentang = findViewById(R.id.tv_tentang);
         btLokasi = findViewById(R.id.bt_lokasi);
+        tvalamat = findViewById(R.id.tv_alamat);
 
 
         Intent terima = getIntent();
@@ -35,9 +36,10 @@ public class DetailActivity extends AppCompatActivity {
         ytentang = terima.getStringExtra("xtentang");
         yfoto = terima.getStringExtra("xfoto");
         ylokasi = terima.getStringExtra("xlokasi");
-
+        yalamat = terima.getStringExtra("xalamat");
         tvnama.setText(ynama);
         tvtentang.setText(ytentang);
+        tvalamat.setText(yalamat);
         Glide
                 .with(DetailActivity.this)
                 .load(yfoto)

@@ -52,17 +52,19 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String xnama, xtentang, xfoto, xlokasi;
+                String xnama, xtentang, xfoto, xlokasi, xalamat;
                 xnama = perpustakaan.getNama();
                 xtentang = perpustakaan.getTentang();
                 xfoto = perpustakaan.getFoto();
                 xlokasi = perpustakaan.getKoordinat();
+                xalamat = perpustakaan.getAlamat();
 
                 Intent kirim = new Intent(ctx, DetailActivity.class);
                 kirim.putExtra("xlokasi", xlokasi);
                 kirim.putExtra("xnama",xnama);
                 kirim.putExtra("xtentang", xtentang);
                 kirim.putExtra("xfoto", xfoto);
+                kirim.putExtra("xalamat",xalamat);
                 ctx.startActivity(kirim);
 
             }
