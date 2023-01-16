@@ -67,6 +67,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
                 kirim.putExtra("xalamat",xalamat);
                 ctx.startActivity(kirim);
 
+
             }
         });
     }
