@@ -49,16 +49,17 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.ClassViewHolde
                 .into(holder.iv_foto);
 
         //click detail actitivity
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String xnama, xtentang, xfoto;
+                String xnama, xtentang, xfoto, xlokasi;
                 xnama = perpustakaan.getNama();
                 xtentang = perpustakaan.getTentang();
                 xfoto = perpustakaan.getFoto();
+                xlokasi = perpustakaan.getKoordinat();
 
                 Intent kirim = new Intent(ctx, DetailActivity.class);
+                kirim.putExtra("xlokasi", xlokasi);
                 kirim.putExtra("xnama",xnama);
                 kirim.putExtra("xtentang", xtentang);
                 kirim.putExtra("xfoto", xfoto);

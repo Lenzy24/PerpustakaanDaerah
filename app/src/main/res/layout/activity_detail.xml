@@ -35,7 +35,7 @@
            />
 
         <Button
-            android:id="@+id/b_lokasi"
+            android:id="@+id/bt_lokasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lihat Lokasi"
